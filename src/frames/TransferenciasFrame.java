@@ -128,7 +128,7 @@ public class TransferenciasFrame extends JFrame {
 		JButton btnTransferenciasHistoricas = new JButton("transferencias historicas");
 		btnTransferenciasHistoricas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (e.getSource() == btnTransferencias30Dias) {
+				if (e.getSource() == btnTransferenciasHistoricas) {
 					textArea.setText("");
 					for (TransferenciaEntreCuentas transferencia : wallet.getTransferencias()) {
 						textArea.append("$ " + transferencia.getMontoTransferencia() + " | de "
