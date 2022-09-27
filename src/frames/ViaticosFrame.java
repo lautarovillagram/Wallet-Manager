@@ -155,8 +155,8 @@ public class ViaticosFrame extends JFrame {
 		JButton btnCobrar = new JButton("Cobrar");
 		btnCobrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Viatico viaticoConElMismoMonto = null;
-				for (Viatico viatico : wallet.getViaticos()) {
+				Viatico viaticoConElMismoMonto = new Viatico(0, "0");
+				for (Viatico viatico : wallet.viaticosACobrar()) {
 					if (viatico.getValor() == Float.parseFloat(textMontoCobrado.getText())) {
 						viaticoConElMismoMonto = viatico;
 					}
